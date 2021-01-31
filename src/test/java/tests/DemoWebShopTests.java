@@ -1,7 +1,7 @@
 package tests;
 
 import io.restassured.response.Response;
-import org.apache.commons.io.FileUtils;
+import utils.TestUtils;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import spec.Request;
@@ -19,8 +19,8 @@ public class DemoWebShopTests {
 
         given()
                 .spec(Request.spec())
-                .body(FileUtils.readFromFile("src/test/resources/body.txt"))
-                .cookie(FileUtils.readFromFile("src/test/resources/cookie.txt"))
+                .body(TestUtils.readFromFile("src/test/resources/cookie.txt"))
+                .cookie(TestUtils.readFromFile("src/test/resources/cookie.txt"))
                 .when()
                 .post("/addproducttocart/details/2/2")
                 .then()
@@ -33,8 +33,8 @@ public class DemoWebShopTests {
 
        Response response = given()
                 .spec(Request.spec())
-                .body(FileUtils.readFromFile("src/test/resources/body.txt"))
-                .cookie(FileUtils.readFromFile("src/test/resources/cookie.txt"))
+                .body(TestUtils.readFromFile("src/test/resources/body.txt"))
+                .cookie(TestUtils.readFromFile("src/test/resources/cookie.txt"))
                 .when()
                 .post("/addproducttocart/details/2/2")
                 .then()
@@ -50,8 +50,8 @@ public class DemoWebShopTests {
 
          given()
                  .spec(Request.spec())
-                .body(FileUtils.readFromFile("src/test/resources/body.txt"))
-                .cookie(FileUtils.readFromFile("src/test/resources/cookie.txt"))
+                .body(TestUtils.readFromFile("src/test/resources/body.txt"))
+                .cookie(TestUtils.readFromFile("src/test/resources/cookie.txt"))
                 .when()
                 .post("/addproducttocart/details/2/2")
                 .then()
@@ -66,8 +66,8 @@ public class DemoWebShopTests {
 
         WishListResponse response = given()
                 .spec(Request.spec())
-                .body(FileUtils.readFromFile("src/test/resources/body.txt"))
-                .cookie(FileUtils.readFromFile("src/test/resources/cookie.txt"))
+                .body(TestUtils.readFromFile("src/test/resources/body.txt"))
+                .cookie(TestUtils.readFromFile("src/test/resources/cookie.txt"))
                 .when()
                 .post("/addproducttocart/details/2/2")
                 .then()
